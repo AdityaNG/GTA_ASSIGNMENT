@@ -39,6 +39,14 @@ Report should Include
 4. Limitations or accuracy
 5. Conclusion
 
+# Guidelines 
+
+1. All Programming assignments should consider Graphs of considerable size( atleast 100 vertices)
+2. All Programming assignments should take input from file
+3. Submissions should include source code, input file, and output and its interpretation
+4. All Programming Assignments should be implemented using C/C++
+5. Students should strictly adhere to the deadlines
+
 # List of assignemnts 
 
 <img src="assignments.jpeg">
