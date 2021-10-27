@@ -1,5 +1,14 @@
 # A C++ solution for the chinese postman problem
 
+## TODO
+
+1. Discombobulate the code
+2. (Done) Graph input from file
+3. Generate graph of size 100 vertices
+4. Documentation
+
+# Getting Started
+
 Compilation on Linux:
 ```
 make
