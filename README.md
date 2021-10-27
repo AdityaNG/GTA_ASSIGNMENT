@@ -8,7 +8,7 @@
 4. To find MST
     - Implement Reverse Delete 
     - Implement Boruvka’s algorithm
-5. Maximum matching in Bipartite Graph
+5. Maximum matching in Bipartite GrapSh
 6. Implement Tarjan's algorithm to find Articulation points in a graph
 
 ### Deliverables
@@ -23,7 +23,7 @@
 
 ### Deliverables
 1. Report on basics of Neo4j
-2. sample database creation and access commands with atleast 5 objects/nodes
+2. Sample database creation and access commands with atleast 5 objects/nodes
 3. Implementation and Interpretation of the problem and its solution
 
 ## Assignment 3 (4 marks)
