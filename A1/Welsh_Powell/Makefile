@@ -1,4 +1,4 @@
-WelshPowell:
+WelshPowell: main.cpp
 	g++ -o WelshPowell main.cpp
 
 clean:

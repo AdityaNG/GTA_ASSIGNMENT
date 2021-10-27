@@ -5,7 +5,9 @@
 1. Implement Fleury's Algorithm to find Euler's Circuit
 2. Implement solution to Chinese Postman  Problem
 3. Implement Graph Coloring using Welsh Powell algorithm
-4. Implement Reverse Delete  and  Boruvka’s algorithm to find a MST
+4. To find MST
+    - Implement Reverse Delete 
+    - Implement Boruvka’s algorithm
 5. Maximum matching in Bipartite Graph
 6. Implement Tarjan's algorithm to find Articulation points in a graph
 
