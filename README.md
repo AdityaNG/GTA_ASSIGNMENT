@@ -16,7 +16,7 @@
 2. Readme file
 3. sample outputs
 
-## Assignment 2 (5 marks)
+## Assignment 2 (5 marks) (15th Nov 2021)
 
 1. Conduct a case study on Graph Database Neo4j
 2. Consider a problem and implement Graph based analysis using Neo4J (sample problem will be discussed in class)
@@ -26,7 +26,7 @@
 2. Sample database creation and access commands with atleast 5 objects/nodes
 3. Implementation and Interpretation of the problem and its solution
 
-## Assignment 3 (4 marks)
+## Assignment 3 (4 marks) (1st Dec 2021)
 
 Choose a research problem based on graphs and generate a report  
 Note: Student is expected to read the paper, understand and then write a report on the paper. There will be reduction is marks, if the sentences in the report are copied as it is from the paper.
