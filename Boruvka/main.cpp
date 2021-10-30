@@ -1,7 +1,7 @@
 // Boruvka's algorithm to find Minimum Spanning
 // Tree of a given connected, undirected and
 // weighted graph
-#include <stdio.h>
+#include <iostream>
   
 // a structure to represent a weighted edge in graph
 struct Edge
@@ -113,8 +113,9 @@ void boruvkaMST(struct Graph* graph)
                 if (set1 == set2)
                     continue;
                 MSTweight += edge[cheapest[i]].weight;
-                printf("Edge %d-%d included in MST\n",
-                       edge[cheapest[i]].src, edge[cheapest[i]].dest);
+                std::cout << "Edge " << edge[cheapest[i]].src << "-" << edge[cheapest[i]].dest << " included in MST\n";
+                // printf("Edge %d-%d included in MST\n",
+                //        edge[cheapest[i]].src, edge[cheapest[i]].dest);
   
                 // Do a union of set1 and set2 and decrease number
                 // of trees
@@ -185,35 +186,20 @@ int main()
         |      \ |
         2--------3
             4       */
-    int V = 4;  // Number of vertices in graph
-    int E = 5;  // Number of edges in graph
+
+    int V, E;
+    std::cin >> V >> E; // Read number of vertices and number of edges
+
     struct Graph* graph = createGraph(V, E);
-  
-  
-    // add edge 0-1
-    graph->edge[0].src = 0;
-    graph->edge[0].dest = 1;
-    graph->edge[0].weight = 10;
-  
-    // add edge 0-2
-    graph->edge[1].src = 0;
-    graph->edge[1].dest = 2;
-    graph->edge[1].weight = 6;
-  
-    // add edge 0-3
-    graph->edge[2].src = 0;
-    graph->edge[2].dest = 3;
-    graph->edge[2].weight = 5;
-  
-    // add edge 1-3
-    graph->edge[3].src = 1;
-    graph->edge[3].dest = 3;
-    graph->edge[3].weight = 15;
-  
-    // add edge 2-3
-    graph->edge[4].src = 2;
-    graph->edge[4].dest = 3;
-    graph->edge[4].weight = 4;
+
+    for (int i = 0; i < E; i++) {
+        int u, v, w;
+        std::cin >> u >> v >> w; // Read the edges
+        graph->edge[i].src = u;
+        graph->edge[i].dest = v;
+        graph->edge[i].weight = w;
+
+    }
   
     boruvkaMST(graph);
   

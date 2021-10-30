@@ -54,3 +54,16 @@ Report should Include
 <img src="assignments.jpeg">
 
 https://pesuonline.sharepoint.com/:x:/s/Aug-Dec-2021-UE19CS323-GTA-Elective-2-5thsem-Dr.SN/ESE9bWf2aRJHiKDP5hCz4WEBk3VWqDgtG6Fava2TieZC3w
+
+
+### Generating graph
+On Mac and Linux:
+```bash
+g++ -std=c++17 gen.cpp -o gen
+./gen > input.txt
+```
+On Windows:
+```bash
+g++ -std=c++17 gen.cpp -o gen
+gen.exe > input.txt
+```
