@@ -24,7 +24,7 @@ const int maxTries = 10; // if the code keeps reaching line 182, increase this v
 const int numVertices = 10;
 const bool weighted = true; // change to true, if you want a weighted graph
 const int maxweight = 30;
-const int START = 1; // for one based indexing graphs
+const int START = 0; // for one based indexing graphs
 
 using LL = long long;
 using VI = std::vector<int>;
