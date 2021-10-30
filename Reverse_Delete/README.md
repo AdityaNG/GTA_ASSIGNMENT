@@ -31,3 +31,17 @@ Edges in MST
 (6, 7) 
 Total weight of MST is 37
 ```
+
+## Compiling and Running:
+
+On Mac and Linux:
+```bash
+g++ -std=c++17 main.cpp -o Boruvka
+./ReverseDelete < ../input.txt > output.txt
+```
+
+On Windows:
+```bash
+g++ -std=c++17 main.cpp -o Boruvka
+ReverseDelete.exe < ../input.txt > output.txt
+```
