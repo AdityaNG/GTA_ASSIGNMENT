@@ -21,7 +21,7 @@ const int maxTries = 10; // if the code keeps reaching line 182, increase this v
     ./boruvka < input_file
 */
 
-const int numVertices = 10;
+const int numVertices = 100;
 const bool weighted = true; // change to true, if you want a weighted graph
 const int maxweight = 30;
 const int START = 0; // for one based indexing graphs
