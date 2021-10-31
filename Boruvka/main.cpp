@@ -1,8 +1,10 @@
 // Boruvka's algorithm to find Minimum Spanning
 // Tree of a given connected, undirected and
 // weighted graph
+#include <vector>
 #include <iostream>
-  
+using namespace std;
+
 // a structure to represent a weighted edge in graph
 struct Edge
 {
@@ -187,23 +189,19 @@ int main()
         2--------3
             4       */
 
-    int V, E;
-    std::cin >> V >> E; // Read number of vertices and number of edges
+    int N,M;
+    cin >> N >> M;
+    struct Graph* graph = createGraph(N, M);
 
-    struct Graph* graph = createGraph(V, E);
-
-    for (int i = 0; i < E; i++) {
-        int u, v, w;
-        std::cin >> u >> v >> w; // Read the edges
+    int u, v, w;
+    for (int i = 0; i < M; ++i){
+        cin >> u >> v >> w;
         graph->edge[i].src = u;
         graph->edge[i].dest = v;
         graph->edge[i].weight = w;
-
     }
   
     boruvkaMST(graph);
   
     return 0;
 }
-  
-// Thanks to Anukul Chand for modifying above code.

@@ -31,11 +31,11 @@ Weight of MST is 19
 On Mac and Linux:
 ```bash
 g++ -std=c++17 main.cpp -o Boruvka
-./Boruvka < ../input.txt > output.txt
+./Boruvka < ../input_file > output.txt
 ```
 
 On Windows:
 ```bash
 g++ -std=c++17 main.cpp -o Boruvka
-Boruvka.exe < ../input.txt > output.txt
+Boruvka.exe < ../input_file > output.txt
 ```
