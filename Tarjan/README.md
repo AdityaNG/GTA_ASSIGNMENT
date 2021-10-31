@@ -48,3 +48,16 @@ SCCs in fourth graph
 SCCs in fifth graph 
 4 3 2 1 0
 ```
+## Compiling and Running:
+
+On Mac and Linux:
+```bash
+g++ -std=c++17 main.cpp -o Tarjan
+./Tarjan < ../input.txt > output.txt
+```
+
+On Windows:
+```bash
+g++ -std=c++17 main.cpp -o Tarjan
+Tarjan.exe < ../input.txt > output.txt
+```
