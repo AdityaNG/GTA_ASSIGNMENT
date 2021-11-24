@@ -2,7 +2,7 @@
 
 Author: Aditya NG (PES1UG19CS032)
 
-## Assignment 1 (6 marks)
+## Assignment 1
 
 1. Implement Fleury's Algorithm to find Euler's Circuit
 2. Implement solution to Chinese Postman  Problem
