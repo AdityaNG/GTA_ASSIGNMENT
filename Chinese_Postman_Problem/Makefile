@@ -1,3 +1,7 @@
+FILE = chinese
+
+all: chinese
+	./chinese -f sample_input.txt > output.txt
 
 FLAG = -O3 -m64 -Wall
 

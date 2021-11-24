@@ -4,6 +4,9 @@
 #include <list>
 #include <iostream>
 #include <vector>
+#include <cstring>
+#include <algorithm>
+
 using namespace std;
   
 // Creating shortcut for an integer pair

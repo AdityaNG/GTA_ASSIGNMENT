@@ -180,14 +180,6 @@ void Union(struct subset subsets[], int x, int y)
 // Driver program to test above functions
 int main()
 {
-    /* Let us create following weighted graph
-             10
-        0--------1
-        |  \     |
-       6|   5\   |15
-        |      \ |
-        2--------3
-            4       */
 
     int N,M;
     cin >> N >> M;

@@ -1,3 +1,8 @@
+FILE = fleury
+
+all: fleury
+	./${FILE} > output.txt
+
 fleury: main.cpp
 	g++ -o fleury main.cpp
 

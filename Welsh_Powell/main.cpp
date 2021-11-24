@@ -1,6 +1,8 @@
 #include <iostream>
 #include <algorithm>
 #include <cstring>
+#include <vector>
+using namespace std;
 const int x = 10;   //vertex no.
 
 
@@ -9,36 +11,21 @@ int counter = 0;
 bool problem = false;
 
 /*  Example graph
-	 B      G---------J
-	/ \      \        |
+		 2      7---------8
+		/ \      \        |
        /   \      \       |
       /     \      \      |
-     A------C-------E-----K
+     1------3-------5-----9
      \     /       /      |
       \   /       /       |
        \ /       /        |
-        D-------F---------L
+        4-------6---------10
 
 */
 
-bool graf[x][x] = { //adj. matrix
-	0,1,1,1,0,0,0,0,0,0,
-	1,0,1,0,0,0,0,0,0,0,
-	1,1,0,1,1,0,0,0,0,0,
-	1,0,1,0,0,1,0,0,0,0,
-	0,0,1,0,0,1,1,0,1,0,
-	0,0,0,1,1,0,0,0,1,1,
-	0,0,0,0,1,0,0,1,0,0,
-	0,0,0,0,0,0,1,0,1,0,
-	0,0,0,0,1,0,0,1,0,1,
-	0,0,0,0,0,1,0,0,1,0
-};
-
-char vertex_names[x] = {'A','B','C','D','E','F','G','J','K','L'};
 int rate_list[x]; //{ 0,0,0,0,0,0,0,0,0,0};
 
-struct Graf {
-	char vertex_id[x];
+struct Graph_t {
 	int vertex_rates[x];
 	bool adj[x][x];
 	int colors[x];
@@ -47,7 +34,7 @@ struct Graf {
 
 //welsh powell
 
-void colorIt(Graf g) {
+void colorIt(Graph_t g) {
 	counter++;
 	int biggest=0;
 	int temp_rate = 0;
@@ -73,7 +60,7 @@ void colorIt(Graf g) {
 	//coloring biggest one first
 
 	g.colors[biggest] = colors[counter];
-	std::cout << g.vertex_id[biggest] <<":color "<< g.colors[biggest]<<std::endl;
+	std::cout << "vert(" << biggest << ")" <<":color("<< g.colors[biggest]<<")"<<std::endl;
 
 	//coloring which doesn't have path with biggest one
 
@@ -85,7 +72,7 @@ void colorIt(Graf g) {
 
 					if (t == x - 1 && !problem) {
 						g.colors[e] = colors[counter];
-						std::cout << g.vertex_id[e] <<":color "<< g.colors[e] << std::endl;
+						std::cout << "vert(" << e << ")" <<":color("<< g.colors[e] << ")" << std::endl;
 						g.colored[e] = true;
 						problem = false;
 					}
@@ -104,26 +91,37 @@ void colorIt(Graf g) {
 
 	}
 
-	else colorIt(g); //recusive because too lazy to sort :)
+	else colorIt(g); // recusive
 
 }
 
 int main()
 {
-	Graf graf1;
+	Graph_t graph_ele1;
 
 	//init color
 
 	for (int y = 0; y < x; y++) {
-		graf1.colors[y] = 99;
-		graf1.colored[y] = false;
+		graph_ele1.colors[y] = 99;
+		graph_ele1.colored[y] = false;
 	}
 
-	//init graph
-	memcpy(&graf1.adj, &graf, sizeof(graf1.adj));
-	memcpy(&graf1.vertex_id, &vertex_names, sizeof(graf1.vertex_id));
+	int N;
+	N = x;
+    bool graph_ele_in[N][N];
 
-	colorIt(graf1);
+    int u;
+    for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+        	cin >> u;
+			graph_ele_in[i][j] = u;
+		}
+    }
+
+	//init graph
+	memcpy(&graph_ele1.adj, &graph_ele_in, sizeof(graph_ele1.adj));
+
+	colorIt(graph_ele1);
 
 	return 0;
 }

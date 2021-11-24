@@ -95,13 +95,17 @@ int main()
     // addEdge(adj1, 3, 4);
     // AP(adj1, V);
 
-    // cout << "\nArticulation points in second graph \n";
-    // V = 4;
-    // vector<int> adj2[V];
-    // addEdge(adj2, 0, 1);
-    // addEdge(adj2, 1, 2);
-    // addEdge(adj2, 2, 3);
-    // AP(adj2, V);
+    /*
+    cout << "\nArticulation points in second graph \n";
+    int V = 4;
+    vector<int> adj2[V];
+    addEdge(adj2, 0, 1);
+    addEdge(adj2, 1, 2);
+    addEdge(adj2, 2, 3);
+    AP(adj2, V);
+
+    return 0;
+    */
 
     // cout << "\nArticulation points in third graph \n";
     // V = 7;

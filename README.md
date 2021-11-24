@@ -1,5 +1,7 @@
 # Graph Theory and its Applications
 
+Author: Aditya NG (PES1UG19CS032)
+
 ## Assignment 1 (6 marks)
 
 1. Implement Fleury's Algorithm to find Euler's Circuit
@@ -16,31 +18,6 @@
 2. Readme file
 3. sample outputs
 
-## Assignment 2 (5 marks) (15th Nov 2021)
-
-1. Conduct a case study on Graph Database Neo4j
-2. Consider a problem and implement Graph based analysis using Neo4J (sample problem will be discussed in class)
-
-### Deliverables
-1. Report on basics of Neo4j
-2. Sample database creation and access commands with atleast 5 objects/nodes
-3. Implementation and Interpretation of the problem and its solution
-
-## Assignment 3 (4 marks) (1st Dec 2021)
-
-Choose a research problem based on graphs and generate a report  
-Note: Student is expected to read the paper, understand and then write a report on the paper. There will be reduction is marks, if the sentences in the report are copied as it is from the paper.
-
-### Deliverables
-
-Report on a research problem
-Report should Include
-1. Introduction and the problem considered in the research paper and its application
-2. Literature Survey 
-3. Proposed model
-4. Limitations or accuracy
-5. Conclusion
-
 # Guidelines 
 
 1. All Programming assignments should consider Graphs of considerable size( atleast 100 vertices)
@@ -49,21 +26,92 @@ Report should Include
 4. All Programming Assignments should be implemented using C/C++
 5. Students should strictly adhere to the deadlines
 
-# List of assignemnts 
+## Running the Project
+There are two ways of running this project. <br>
 
-<img src="assignments.jpeg">
+### Method 1:
+Run the file using the bash script. <br>
+```bash
+chmod a+rx run.sh
+./run.sh
+```
+The [run.sh](./run.sh) file goes to each of the folders containing the implemented algorithm and runs the dedicated `Makefile`. <br>
 
-https://pesuonline.sharepoint.com/:x:/s/Aug-Dec-2021-UE19CS323-GTA-Elective-2-5thsem-Dr.SN/ESE9bWf2aRJHiKDP5hCz4WEBk3VWqDgtG6Fava2TieZC3w
+Output :
+
+```bash
+aditya@sped-machine:~/VSProjects/GTA_ASSIGNMENT$ ./run.sh 
+RUNNING  Boruvka
+------------------------------------------------
+g++ -O3 -o Boruvka main.cpp
+./Boruvka < ../input_file > output.txt
+rm Boruvka
+------------------------------------------------
+RUNNING  Chinese_Postman_Problem
+------------------------------------------------
+g++ -O3 -m64 -Wall -c ./Minimum-Cost-Perfect-Matching/Matching.cpp -o Matching.o
+g++ -O3 -m64 -Wall -c ./Minimum-Cost-Perfect-Matching/BinaryHeap.cpp -o BinaryHeap.o
+g++ -O3 -m64 -Wall -c ./Minimum-Cost-Perfect-Matching/Graph.cpp -o Graph.o
+g++ -O3 -m64 -Wall -c Example.cpp -o Example.o
+g++ -O3 -m64 -Wall Matching.o BinaryHeap.o Graph.o Example.o -o chinese
+./chinese -f sample_input.txt > output.txt
+rm Matching.o BinaryHeap.o Graph.o Example.o chinese
+------------------------------------------------
+RUNNING  Fleury
+------------------------------------------------
+g++ -o fleury main.cpp
+./fleury > output.txt
+rm fleury
+------------------------------------------------
+RUNNING  Maximum_Matching
+------------------------------------------------
+g++ -o MaximumMatching main.cpp
+./MaximumMatching > output.txt
+rm MaximumMatching
+------------------------------------------------
+RUNNING  Reverse_Delete
+------------------------------------------------
+g++ -o ReverseDelete main.cpp
+./ReverseDelete < input.txt > output.txt
+rm ReverseDelete
+------------------------------------------------
+RUNNING  Tarjan
+------------------------------------------------
+g++ -o Tarjan main.cpp
+./Tarjan < input.txt > output.txt
+rm Tarjan
+------------------------------------------------
+RUNNING  Welsh_Powell
+------------------------------------------------
+g++ -o WelshPowell main.cpp
+./WelshPowell < input.txt > output.txt
+rm WelshPowell
+------------------------------------------------
+```
+
+### Method 2:
+Individually the `Makefile`s for each of the folders containing the algorithms. <br>
+```bash
+cd <FOLDER>
+make
+```
+To remove the generated files <br>
+```bash
+make clean
+```
+
+### Cleaning the Project
+Run the clean bash script. <br>
+```bash
+chmod a+rx clean.sh
+./clean.sh
+```
+The [clean.sh](./clean.sh) file goes to each of the folders containing the implemented algorithm and cleans it up. <br>
 
 
-### Generating graph
-On Mac and Linux:
+## Generating graph
+Generate graph with
 ```bash
 g++ -std=c++17 gen.cpp -o gen
 ./gen > input.txt
-```
-On Windows:
-```bash
-g++ -std=c++17 gen.cpp -o gen
-gen.exe > input.txt
 ```
