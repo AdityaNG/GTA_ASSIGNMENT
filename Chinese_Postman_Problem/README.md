@@ -28,8 +28,8 @@ Sample input:
 6 9 2
 7 8 1
 8 9 5
-
 ```
+
 Sample output:
 ```
 Solution cost: 62

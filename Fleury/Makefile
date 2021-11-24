@@ -1,7 +1,7 @@
 FILE = fleury
 
 all: fleury
-	./${FILE} > output.txt
+	./${FILE} < input.txt > output.txt
 
 fleury: main.cpp
 	g++ -o fleury main.cpp

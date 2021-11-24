@@ -148,8 +148,21 @@ int Graph::DFSCount(int v, bool visited[])
 // Driver program to test above function
 int main()
 {
+
+    int N, M;
+    cin >> N >> M;
+    Graph g1(N);
+    int u, v;
+    for (int i = 0; i < M; i++) {
+        cin >> u >> v;
+        g1.addEdge(u, v);
+    }
+    g1.printEulerTour();
+
+    return 0;
     // Let us first create and test graphs shown in above
     // figure
+    /*
     Graph g1(4);
     g1.addEdge(0, 1);
     g1.addEdge(0, 2);
@@ -175,4 +188,5 @@ int main()
     g3.printEulerTour();
  
     return 0;
+    */
 }

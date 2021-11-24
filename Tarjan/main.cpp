@@ -84,41 +84,6 @@ void addEdge(vector<int> adj[], int u, int v)
 
 int main()
 {
-    // Create graphs given in above diagrams
-    // cout << "Articulation points in first graph \n";
-    // int V = 5;
-    // vector<int> adj1[V];
-    // addEdge(adj1, 1, 0);
-    // addEdge(adj1, 0, 2);
-    // addEdge(adj1, 2, 1);
-    // addEdge(adj1, 0, 3);
-    // addEdge(adj1, 3, 4);
-    // AP(adj1, V);
-
-    /*
-    cout << "\nArticulation points in second graph \n";
-    int V = 4;
-    vector<int> adj2[V];
-    addEdge(adj2, 0, 1);
-    addEdge(adj2, 1, 2);
-    addEdge(adj2, 2, 3);
-    AP(adj2, V);
-
-    return 0;
-    */
-
-    // cout << "\nArticulation points in third graph \n";
-    // V = 7;
-    // vector<int> adj3[V];
-    // addEdge(adj3, 0, 1);
-    // addEdge(adj3, 1, 2);
-    // addEdge(adj3, 2, 0);
-    // addEdge(adj3, 1, 3);
-    // addEdge(adj3, 1, 4);
-    // addEdge(adj3, 1, 6);
-    // addEdge(adj3, 3, 5);
-    // addEdge(adj3, 4, 5);
-    // AP(adj3, V);
 
     int N, M;
     cin >> N >> M;

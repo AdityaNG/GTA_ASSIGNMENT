@@ -74,20 +74,8 @@ int maxBPM(bool bpGraph[M][N])
     return result;
 }
  
-// Driver Code
 int main()
 {
-    // Let us create a bpGraph
-    // shown in the above example
-    /*
-    bool bpGraph[M][N] = {{0, 1, 1, 0, 0, 0},
-                          {1, 0, 0, 1, 0, 0},
-                          {0, 0, 1, 0, 0, 0},
-                          {0, 0, 1, 1, 0, 0},
-                          {0, 0, 0, 0, 0, 0},
-                          {0, 0, 0, 0, 0, 1}};
-    */
-
     bool bpGraph[M][N];
     int u;
     for (int i = 0; i < M; i++) {

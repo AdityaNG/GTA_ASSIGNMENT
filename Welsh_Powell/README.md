@@ -8,7 +8,25 @@ make
 ```
 Usage:
 ```
-./WelshPowell
+./WelshPowell < input.txt > output.txt
+```
+
+Sample input:
+<p align="center">
+    <img src="sample_input.png">
+</p>
+
+```
+0 1 1 1 0 0 0 0 0 0 
+1 0 1 0 0 0 0 0 0 0 
+1 1 0 1 1 0 0 0 0 0 
+1 0 1 0 0 1 0 0 0 0 
+0 0 1 0 0 1 1 0 1 0 
+0 0 0 1 1 0 0 0 1 1 
+0 0 0 0 1 0 0 1 0 0 
+0 0 0 0 0 0 1 0 1 0 
+0 0 0 0 1 0 0 1 0 1 
+0 0 0 0 0 1 0 0 1 0
 ```
 
 Sample output:
