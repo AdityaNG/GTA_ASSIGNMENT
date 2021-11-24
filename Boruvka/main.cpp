@@ -177,7 +177,6 @@ void Union(struct subset subsets[], int x, int y)
     }
 }
   
-// Driver program to test above functions
 int main()
 {
 

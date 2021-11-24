@@ -1,21 +1,10 @@
 # A C++ solution for the chinese postman problem
 
-## TODO
-
-1. Discombobulate the code
-2. (Done) Graph input from file
-3. Generate graph of size 100 vertices
-4. Documentation
-
 # Getting Started
 
-Compilation on Linux:
+Compilation (along with execution) on Linux:
 ```
 make
-```
-Usage:
-```
-./chinese -f sample_input.txt
 ```
 ## File format:
 The first two lines give n (number of vertices) and m (number of edges). Each of the next m lines has a tuple (u, v, c) representing an edge, where u and v are the endpoints (0-based indexing) of the edge and c is its cost.
